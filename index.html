@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A fan-made League of Legends themed sample website for web hosting practice." />
+  <title>Runeterra | League of Legends Fan Demo</title>
+  <style>
+    :root{--bg:#07131b;--panel:#0d2029;--gold:#c8aa6e;--gold-light:#f0dba4;--text:#f4f5f2;--muted:#a3b6bc;--aqua:#21b5b5}
+    *{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg)}a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:10;background:rgba(4,14,20,.94);border-bottom:1px solid #29404b;backdrop-filter:blur(10px)}
+    nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:17px 24px;gap:16px}.logo{font-weight:900;letter-spacing:2px;color:var(--gold-light);font-size:1.15rem}.logo span{color:white;font-size:.68rem;display:block;letter-spacing:3px;margin-top:5px}nav .links{display:flex;gap:26px;font-size:.89rem;font-weight:bold}nav .links a:hover{color:var(--gold)}
+    .hero{min-height:590px;display:flex;align-items:center;justify-content:center;text-align:center;padding:95px 22px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 35%,#175366 0%,transparent 42%),linear-gradient(135deg,#0c2835,#07131b 62%,#183c43)}
+    .hero:before{content:"";position:absolute;width:540px;height:540px;border:2px solid #b99a5a33;transform:rotate(45deg);top:10%;left:calc(50% - 270px);pointer-events:none}.hero-content{z-index:1;max-width:780px}.eyebrow{text-transform:uppercase;letter-spacing:5px;color:var(--gold-light);font-size:.84rem;font-weight:bold}.hero h1{font-family:Georgia,serif;font-size:clamp(3.2rem,9vw,6.1rem);line-height:.98;text-transform:uppercase;margin:20px 0;color:#f4dfac;text-shadow:0 4px 30px #000}.hero h1 span{display:block;color:#fff;font-size:.55em;margin-top:10px}.hero p{color:#d5e1e3;line-height:1.8;max-width:600px;margin:22px auto 30px}.btn{display:inline-block;padding:15px 28px;background:linear-gradient(120deg,#c9ab68,#f0dba4);color:#101c22;font-weight:800;text-transform:uppercase;letter-spacing:1px;border:1px solid #fae4af;cursor:pointer;transition:transform .2s}.btn:hover{transform:translateY(-3px)}
+    .container{max-width:1120px;margin:auto;padding:75px 24px}.section-title{text-align:center;font-family:Georgia,serif;font-size:clamp(2rem,5vw,2.9rem);color:var(--gold-light);text-transform:uppercase;margin:10px 0}.section-intro{text-align:center;color:var(--muted);line-height:1.7;max-width:680px;margin:10px auto 38px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{border:1px solid #3a595f;background:linear-gradient(155deg,#14323b,#0b1b25);padding:30px 24px;transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-7px);border-color:var(--gold)}.card .symbol{font-size:2.7rem;margin-bottom:15px}.card h3{font-family:Georgia,serif;color:var(--gold-light);font-size:1.4rem;margin:7px 0}.card p{line-height:1.8;color:#b9cbd0;font-size:.95rem}.tag{color:var(--aqua);text-transform:uppercase;letter-spacing:2px;font-size:.72rem;font-weight:bold}
+    .world{background:linear-gradient(100deg,#102f3b,#081721);border-top:1px solid #23414b;border-bottom:1px solid #23414b}.world-wrap{max-width:1120px;margin:auto;padding:75px 24px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px}.world-visual{min-height:300px;border:1px solid #907b4a;background:radial-gradient(circle,#347b7d 0%,#12323d 42%,#081720 72%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.world-visual:after{content:"";position:absolute;inset:24px;border:1px solid #b59a6547;transform:rotate(12deg)}.world-visual span{font-family:Georgia,serif;color:#f3dfae;letter-spacing:7px;font-size:clamp(1.5rem,4vw,2.5rem);text-align:center;z-index:1}.world h2{font-family:Georgia,serif;font-size:2.6rem;color:var(--gold-light);margin:10px 0}.world p{color:#c2d0d3;line-height:1.85}.small-btn{border:1px solid var(--gold);background:transparent;color:var(--gold-light);padding:12px 20px;cursor:pointer;font-weight:bold;margin-top:12px}.small-btn:hover{background:#c8aa6e22}
+    .cta{text-align:center;padding:85px 24px}.cta h2{font-family:Georgia,serif;color:var(--gold-light);font-size:2.6rem}.cta p{color:var(--muted);margin-bottom:27px}footer{text-align:center;padding:25px 15px;border-top:1px solid #284149;color:#91a7af;font-size:.8rem;line-height:1.8}footer a{color:var(--gold-light)}
+    @media(max-width:740px){nav{flex-wrap:wrap;justify-content:center}.links{justify-content:center;flex-wrap:wrap}.cards{grid-template-columns:1fr}.world-wrap{grid-template-columns:1fr}.hero{min-height:530px}.container{padding-top:55px;padding-bottom:55px}}
+  </style>
+</head>
+<body>
+  <header><nav><a class="logo" href="#home">LEAGUE OF LEGENDS <span>FAN WEBSITE</span></a><div class="links"><a href="#home">HOME</a><a href="#champions">CHAMPIONS</a><a href="#world">RUNETERRA</a><a href="#about">ABOUT</a></div></nav></header>
+  <main>
+    <section class="hero" id="home"><div class="hero-content"><div class="eyebrow">Welcome to the Rift</div><h1>Become <span>a Legend</span></h1><p>Explore the champions, discover the world of Runeterra, and experience a sample fan-made website inspired by League of Legends.</p><a class="btn" href="#champions">Explore Champions</a></div></section>
+    <section class="container" id="champions"><div class="eyebrow" style="text-align:center">Choose your path</div><h2 class="section-title">Featured Champions</h2><p class="section-intro">Three familiar champions, three different playstyles. Who will you choose on the Rift?</p><div class="cards">
+      <article class="card"><div class="symbol">⚔️</div><div class="tag">Fighter</div><h3>Yasuo</h3><p>A skilled swordsman who uses the wind to outmaneuver opponents and strike with precision.</p></article>
+      <article class="card"><div class="symbol">✨</div><div class="tag">Mage</div><h3>Lux</h3><p>A light-wielding mage who supports allies and unleashes dazzling magical abilities.</p></article>
+      <article class="card"><div class="symbol">🦊</div><div class="tag">Mage / Assassin</div><h3>Ahri</h3><p>A mobile spellcaster known for her charm, spirit magic, and swift attacks.</p></article>
+    </div></section>
+    <section class="world" id="world"><div class="world-wrap"><div class="world-visual"><span>RUNETERRA</span></div><div><div class="eyebrow">Beyond the battlefield</div><h2>Discover Runeterra</h2><p>From the glittering city of Piltover to the magical lands of Ionia, Runeterra is filled with legends, rivalries, and adventures.</p><button class="small-btn" id="factButton">Reveal a Fun Fact</button><p id="factText" aria-live="polite"></p></div></div></section>
+    <section class="cta" id="about"><div class="eyebrow">Ready to play?</div><h2>Enter the Rift</h2><p>This is a static HTML demo made for practicing website hosting.</p><a class="btn" href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer">Official LoL Website ↗</a></section>
+  </main>
+  <footer>Fan-made educational demo. Not affiliated with or endorsed by Riot Games.<br />League of Legends and its characters are trademarks of Riot Games.</footer>
+  <script>
+    const facts = ["Summoner's Rift is a five-versus-five map.","Piltover and Zaun are neighboring cities in Runeterra.","Champions have different roles such as fighter, mage, tank, marksman, assassin, and support."];
+    let factIndex = 0;
+    document.getElementById('factButton').addEventListener('click', function () {
+      document.getElementById('factText').textContent = facts[factIndex % facts.length];
+      factIndex++;
+    });
+  </script>
+</body>
+</html>
